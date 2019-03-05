@@ -1,11 +1,20 @@
 import React, { Component } from 'react';
+
+import {Message} from './Message';
 import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
-  render() {
 
-    const firstvalue: string='Arnab';
+  componentWillMount = ()  => {
+    console.log('Almost there');
+  }
+
+  componentDidMount = ()  => {
+    console.log('Finally mounted')
+  }
+
+  render() {
 
     return (
       <div className="App">
@@ -14,7 +23,9 @@ class App extends Component {
           <p>
             Edit <code>src/App.js</code> and save to reload.
           </p>
-          <span>The type of {firstvalue} is {typeof firstvalue}</span>
+          <span>
+            <Message msg='This is a message!!!'></Message>
+          </span>
         </header>
       </div>
     );
