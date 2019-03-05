@@ -4,6 +4,9 @@ import './App.css';
 
 class App extends Component {
   render() {
+
+    const firstvalue: string='Arnab';
+
     return (
       <div className="App">
         <header className="App-header">
@@ -11,14 +14,7 @@ class App extends Component {
           <p>
             Edit <code>src/App.js</code> and save to reload.
           </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+          <span>The type of {firstvalue} is {typeof firstvalue}</span>
         </header>
       </div>
     );
