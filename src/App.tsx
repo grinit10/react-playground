@@ -1,18 +1,20 @@
 import React, { Component } from 'react';
 
-import {Message} from './Message';
+import { UserMessage } from './interfaces/UserMessage';
+import { Message } from './Message';
 import logo from './logo.svg';
 import './App.css';
 
+const initstate: UserMessage = {
+  name: 'Arnab',
+  message: 'Hello World'
+}
+
+type State = typeof initstate;
+
 class App extends Component {
 
-  componentWillMount = ()  => {
-    console.log('Almost there');
-  }
-
-  componentDidMount = ()  => {
-    console.log('Finally mounted')
-  }
+  readonly state : State = initstate;
 
   render() {
 
@@ -24,7 +26,7 @@ class App extends Component {
             Edit <code>src/App.js</code> and save to reload.
           </p>
           <span>
-            <Message msg='This is a message!!!'></Message>
+            <Message name={this.state.name} message={this.state.message}></Message>
           </span>
         </header>
       </div>

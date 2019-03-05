@@ -1,3 +1,5 @@
 import React from 'react';
 
-export const Message = (prop: { msg: string }) => (<p>{prop.msg}</p>)
+import {UserMessage} from './interfaces/UserMessage';
+
+export const Message = (prop: UserMessage) => (<p>{prop.message} from {prop.name}</p>)
