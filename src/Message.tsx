@@ -1,5 +1,8 @@
 import React from 'react';
 
-import {UserMessage} from './interfaces/UserMessage';
+import {UserMessageHoc} from './HOCs/UserMessageHoc';
 
-export const Message = (prop: UserMessage) => (<p>{prop.message} from {prop.name}</p>)
+const msgHtml = (prop: any):any => <p>{prop.message} from {prop.name}</p>
+
+const Message = UserMessageHoc(msgHtml);
+export default Message;

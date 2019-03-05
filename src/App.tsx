@@ -1,20 +1,10 @@
 import React, { Component } from 'react';
 
-import { UserMessage } from './interfaces/UserMessage';
-import { Message } from './Message';
+import Message from './Message';
 import logo from './logo.svg';
 import './App.css';
 
-const initstate: UserMessage = {
-  name: 'Arnab',
-  message: 'Hello World'
-}
-
-type State = typeof initstate;
-
 class App extends Component {
-
-  readonly state : State = initstate;
 
   render() {
 
@@ -26,7 +16,7 @@ class App extends Component {
             Edit <code>src/App.js</code> and save to reload.
           </p>
           <span>
-            <Message name={this.state.name} message={this.state.message}></Message>
+            <Message></Message>
           </span>
         </header>
       </div>
