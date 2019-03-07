@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
+import Button from '@material-ui/core/Button';
 
-import Message from './Message';
-import logo from './logo.svg';
 import './App.css';
 
 class App extends Component {
@@ -9,17 +8,9 @@ class App extends Component {
   render() {
 
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <span>
-            <Message></Message>
-          </span>
-        </header>
-      </div>
+      <Button variant="contained" color="primary">
+        Hello World
+      </Button>
     );
   }
 }
